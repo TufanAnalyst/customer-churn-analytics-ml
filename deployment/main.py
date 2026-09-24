@@ -1,9 +1,17 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import pandas as pd
 import joblib
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 model = joblib.load("model/best_churn_pipeline.joblib")
 
@@ -27,7 +35,7 @@ def predict(data: UserInput):
     df = pd.DataFrame([data.model_dump()])
 
     prediction = model.predict(df)[0]
-    proba = model.predict_proba(df)[0]   # [P(not churn), P(churn)]
+    proba = model.predict_proba(df)[0]
 
     if prediction == 1:
         return {
