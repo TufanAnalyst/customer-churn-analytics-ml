@@ -205,12 +205,12 @@ Additionally, the untuned CatBoost configuration achieved higher recall on the t
 | F1-Score (Churn) | 0.61 |
 | ROC AUC | 0.8646 |
 
-![Confusion Matrix](model/confusion_matrix.png)
+![Confusion Matrix](model/confusion_matrix.PNG)
 
 ---
 <h2><a class="anchor" id="feature-importance"></a>Feature Importance</h2>
 
-![Feature Importance](model/feature_importance.png)
+![Feature Importance](model/feature_importance.PNG)
 
 The CatBoost model's feature importance ranking closely matched patterns discovered during manual EDA, reinforcing confidence in the results:
 
@@ -250,7 +250,7 @@ An interactive Power BI dashboard was built to visualize churn patterns across d
 
 | Overview | Demographics | Financial |
 |---|---|---|
-| ![Overview](dashboard/page1_overview.png) | ![Demographics](dashboard/page2_demographics.png) | ![Financial](dashboard/page3_financial.png) |
+| ![Overview](dashboard/page1_overview.PNG) | ![Demographics](dashboard/page2_demographics.PNG) | ![Financial](dashboard/page3_financial.PNG) |
 
 ---
 <h2><a class="anchor" id="live-demo--deployment"></a>Live Demo & Deployment</h2>
@@ -259,7 +259,7 @@ The trained CatBoost model was deployed as a live REST API using **FastAPI**, ho
 
 **Live API URL:** [https://customer-churn-analytics-ml-production.up.railway.app](https://customer-churn-analytics-ml-production.up.railway.app)
 
-**Live Web App Demo:** *[Insert Lovable app link here]*
+**Live Web App Demo:** [customer-churn-guard.lovable.app](https://customer-churn-guard.lovable.app)
 
 > ⚠️ **Note:** The live demo may take up to a minute to respond on the first request. This is expected — Railway's free tier puts the service to sleep after a period of inactivity, and it takes a moment to wake back up on the next request.
 
