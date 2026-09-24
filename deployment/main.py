@@ -27,8 +27,17 @@ def predict(data: UserInput):
     df = pd.DataFrame([data.model_dump()])
 
     prediction = model.predict(df)[0]
+    proba = model.predict_proba(df)[0]   # [P(not churn), P(churn)]
 
     if prediction == 1:
-        return {"result": "Churn"}
+        return {
+            "result": "Churn",
+            "churn_probability": round(float(proba[1]), 4),
+            "retention_probability": round(float(proba[0]), 4)
+        }
     else:
-        return {"result": "Not Churn"}
+        return {
+            "result": "Not Churn",
+            "churn_probability": round(float(proba[1]), 4),
+            "retention_probability": round(float(proba[0]), 4)
+        }
