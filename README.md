@@ -205,12 +205,12 @@ Additionally, the untuned CatBoost configuration achieved higher recall on the t
 | F1-Score (Churn) | 0.61 |
 | ROC AUC | 0.8646 |
 
-![Confusion Matrix](model/confusion_matrix.PNG)
+![Confusion Matrix](images/model/confusion_matrix.PNG)
 
 ---
 <h2><a class="anchor" id="feature-importance"></a>Feature Importance</h2>
 
-![Feature Importance](model/feature_importance.PNG)
+![Feature Importance](images/model/feature_importance.PNG)
 
 The CatBoost model's feature importance ranking closely matched patterns discovered during manual EDA, reinforcing confidence in the results:
 
@@ -246,11 +246,11 @@ Prescriptive analytics goes a step beyond prediction — it recommends specific,
 
 An interactive Power BI dashboard was built to visualize churn patterns across demographics, financial segments, and account behavior.
 
-![Dashboard Demo](dashboard/dashboard_demo.gif)
+![Dashboard Demo](images/dashboard/dashboard_demo.gif)
 
 | Overview | Demographics | Financial |
 |---|---|---|
-| ![Overview](dashboard/page1_overview.PNG) | ![Demographics](dashboard/page2_demographics.PNG) | ![Financial](dashboard/page3_financial.PNG) |
+| ![Overview](images/dashboard/page1_overview.PNG) | ![Demographics](images/dashboard/page2_demographics.PNG) | ![Financial](images/dashboard/page3_financial.PNG) |
 
 ---
 <h2><a class="anchor" id="live-demo--deployment"></a>Live Demo & Deployment</h2>
